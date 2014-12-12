@@ -1,0 +1,118 @@
+﻿html {
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    border-top: solid 10px #000;
+    font-family: "Segoe UI" , Verdana, Helvetica, Sans-Serif;
+}
+.hr1 {
+    border:0;
+    height:0.5px;
+    background:#333;
+    background-image:-webkit-linear-gradient(left, #ccc, #333, #ccc);
+    background-image:-moz-linear-gradient(left, #ccc, #333, #ccc);
+    background-image:-ms-linear-gradient(left, #ccc, #333, #ccc);
+    background-image:-o-linear-gradient(left, #ccc, #333, #ccc);
+    }
+.FloatRight {
+    float: right;
+}
+.FloatLeft {
+    float: left;
+}
+
+/* page part*/
+header, footer, nav {
+    display: block;
+    padding: 10px;
+}
+header {
+    background-image: url('../Immagini/Striscia.jpg');
+    background-repeat: repeat-x;
+    background-position: 50% top;
+}
+.navi {
+    margin:0;
+    padding:0;
+    color:#fff;
+}
+    .navi ul {
+        padding-left:1px;
+        margin:0;
+        list-style-type: none;
+        height:15px;
+    }
+    .navi a {
+    text-decoration: none;
+    text-shadow: 0px 0px 4px #000;
+    color: #fff;
+    font-weight: bold;
+    transition: all 0.8s ease;
+    font-size: 1.1em;
+}
+    .navi li {
+        padding:0px 10px 0px 10px;
+        display:inline;
+        float:left;
+        padding:5px;
+    }
+    .navi a:hover {
+    transition: all 0.8s ease;
+    text-shadow: 0px 0px 40px #4f4f4f;
+    color: #628A81;
+    -ms-transform: scale(1.5,1.5); /* IE 9 */
+    -webkit-transform: scale(1.5,1.5); /* Chrome, Safari, Opera */
+    /*transform: scale(1.5,1.5);*/
+}
+    /*Tabelle*/
+.tbl1 {
+    margin:auto;
+    -webkit-box-shadow: 4px 4px 5px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 4px 4px 5px rgba(50, 50, 50, 0.75);
+    box-shadow: 4px 4px 5px rgba(50, 50, 50, 0.75);
+}
+    .tbl1 th {
+    background-color: #3C606A;
+    color:#fff;
+}
+    .tbl1 tr {
+    }
+    .tbl1 td {
+    }
+
+.appuntamenti {
+    border: thin solid #A0A0C4;
+    position: fixed;
+    display: inline-block;
+    float: left;
+}
+footer {
+    background-image: url('../Immagini/Foot.jpg');
+    background-repeat: no-repeat;
+    background-position: left center;
+        color:#4f4f4f;
+}
+    footer a {
+        text-decoration:none;
+        color:#4f4f4f;
+    }
+
+/********************
+*   Mobile Styles   *
+********************/
+@media only screen and (max-width: 850px) {
+/* page part*/
+    header {
+        background-image: none;
+        background-color: #22486F;
+    }
+        header img {
+        width:90%;
+    }
+    nav {
+        display:inline-block;
+    }
+}
