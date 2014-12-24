@@ -17,21 +17,21 @@
     <form id="form1" runat="server">
         <header>
         <div>
-            <a href="Default.aspx"><img src="Immagini/ScrittaTrasparente.png" /></a>
+            <a href='<%: ResolveUrl("Default.aspx")%>'><img src='<%: ResolveUrl("~/Immagini/ScrittaTrasparente.png")%>' /></a>
         </div>
         <div class="navi">
             <ul>
-                <li><a href="Corsi.aspx">Corsi</a></li>
-                <li><a href="Palestra.aspx">La palestra</a></li>
-                <li><a href="Palmares.aspx">Il palmares</a></li>
-                <li><a href="AgonistiMain.html">Agonisti</a></li>
-                <li><a href="Documenti/Main.aspx">Documenti</a></li>
+                <li><a href='<%: ResolveUrl("Corsi.aspx")%>' >Corsi</a></li>
+                <li><a href='<%: ResolveUrl("Palestra.aspx")%>'>La palestra</a></li>
+                <li><a href='<%: ResolveUrl("Palmares.aspx")%>'>Il palmares</a></li>
+<%--                <li><a href='<%: ResolveUrl("AgonistiMain.html")%>'>Agonisti</a></li>
+                <li><a href="Documenti/Main.aspx">Documenti</a></li>--%>
             </ul>
         </div><hr class="hr1" />
         </header>
 		<div class="container" >
 			<!-- Push Wrapper -->
-			<div class="mp-pusher" id="mp-pusher">
+			<div  class="mp-pusher" id="mp-pusher">
                 <!-- mp-menu -->
                 <nav id="mp-menu" class="mp-menu">
                     <div class="mp-level">
@@ -44,21 +44,14 @@
                                                 <asp:Label ID="Label2" runat="server" Text='<%# Eval("Titolo") %>' />
                                         </a>
                                         <div class="mp-level">
-                                            <h2>
+                                            <h2 style="color: #838A54"  >
                                                 <asp:Label ID="DataLabel" runat="server" Text='<%# Eval("Data", "{0:dd MMM yyyy}") %>' /><br />
                                                 <asp:Label ID="TitoloLabel" runat="server" Text='<%# Eval("Titolo") %>' />
 
-                                            </h2>
+                                            </h2><hr />
                                             <ul>
-                                                <li>
-                                                    <a href="#"><asp:Label ID="DescrizioneLabel" runat="server" Text='<%# Eval("Descrizione") %>' /></a>
-                                                    <div class="mp-level">
-                                                        <ul>
-                                                            <li>
-                                                                <asp:Label ID="ApprofondimentoLabel" runat="server" Text='<%# Eval("Approfondimento") %>' />
-                                                            </li>
-                                                        </ul>
-                                                    </div>
+                                                <li style="color: #FFFFFF">
+                                                    <asp:Label ID="DescrizioneLabel" runat="server" Text='<%# Eval("Descrizione") %>' />
                                                 </li>
                                             </ul>
                                         </div>
@@ -78,18 +71,15 @@
                                     </div>
                                 </LayoutTemplate>
                             </asp:ListView>
-		                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnString %>" SelectCommand="SELECT * FROM [Eventi] WHERE ([Pubblica] = @Pubblica) ORDER BY [Data] DESC">
-                                <SelectParameters>
-                                    <asp:Parameter DefaultValue="true" Name="Pubblica" Type="Boolean" />
-                                </SelectParameters>
+		                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnString %>" SelectCommand="SELECT * FROM [Eventi] WHERE ([Data] >= { fn NOW() } ) ORDER BY [Data] DESC">
                             </asp:SqlDataSource>
                     </div>
                 </nav>
                 <!-- /mp-menu -->
                 <div class="scroller">
                     <!-- this is for emulating position fixed of the nav -->
-                    <div class="block block-40 clearfix">
-                        <a href="#" id="trigger" ><span class="icon icon-calendar">Appuntamenti</span></a>
+                    <div style="padding-left:0px" class="block block-40 clearfix">
+                        <a style="background-color: #9C9D98; border-radius: 0px 10px 10px 0px; padding-left: 5px; margin-left: 0px; padding-right: 10px;" href="#" id="trigger" ><span class="icon icon-calendar">Appuntamenti</span></a>
                     </div>
                     <asp:ContentPlaceHolder ID="Main" runat="server">
                     </asp:ContentPlaceHolder>
@@ -98,7 +88,7 @@
                 <footer>
                 <div>
                        <h6>
-                           <a href="Admin.aspx"><img style="border-style: none; float: left; width: 23px;" alt="" src="Immagini/modifica.gif" /></a>®2014<a href="http://www.cr-consult.eu/zona-web"> <span >Almish<span style="color:#FF0000" lang="it">&amp;</span>Cesàre<span style="color:#FF0000">W</span>eb</span></a>
+                           <a href="Riservata/EventEdit.aspx"><img style="border-style: none; float: left; width: 23px;" alt="" src="Immagini/modifica.gif" /></a>®2014<a href="http://www.cr-consult.eu/zona-web"> <span >Almish<span style="color:#FF0000" lang="it">&amp;</span>Cesàre<span style="color:#FF0000">W</span>eb</span></a>
                            tel. 036353187 cell. 3356255658  mail: cesare@cr-consult.eu 
                        </h6>
                 </div>

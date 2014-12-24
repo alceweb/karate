@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap>
+  <siteMapNode title="Home">
+    <siteMapNode title="Products">
+      <siteMapNode title="Hardware" url="Default.aspx?node=hardware">
+        <siteMapNode title="Mouse"/>
+        <siteMapNode title="Keyboard"/>
+        <siteMapNode title="NetCard"/>
+        <siteMapNode title="Monitor"/>
+        <siteMapNode title="PC"/>
+      </siteMapNode>
+      <siteMapNode title="Software" url="Default.aspx?node=software">
+        <siteMapNode title="Spreadsheet"/>
+        <siteMapNode title="Word Processor"/>
+        <siteMapNode title="Presentation"/>
+        <siteMapNode title="Mail"/>
+        <siteMapNode title="Games"/>
+      </siteMapNode>
+      <siteMapNode title="Books" url="Default.aspx?node=books">
+        <siteMapNode title="Programming"/>
+        <siteMapNode title="Debugging"/>
+        <siteMapNode title="Testing"/>
+        <siteMapNode title="Web Apps"/>
+        <siteMapNode title="WinForm Apps"/>
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode title="Services">
+      <siteMapNode title="Consulting" url="Default.aspx?node=consulting">
+        <siteMapNode title="Processes"/>
+        <siteMapNode title="Management"/>
+        <siteMapNode title="Recruiting"/>
+      </siteMapNode>
+      <siteMapNode title="Development" url="Default.aspx?node=development">
+        <siteMapNode title="Web Apps"/>
+        <siteMapNode title="Enterprise Apps"/>
+        <siteMapNode title="Database"/>
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode title="Support">
+      <siteMapNode title="Drivers" url="Default.aspx?node=drivers">
+        <siteMapNode title="Audio"/>
+        <siteMapNode title="Network"/>
+        <siteMapNode title="Printer"/>
+        <siteMapNode title="Modem"/>
+      </siteMapNode>
+      <siteMapNode title="Manuals" url="Default.aspx?node=manuals">
+        <siteMapNode title="Applications"/>
+        <siteMapNode title="Troubleshooting"/>
+        <siteMapNode title="Installation"/>
+        <siteMapNode title="Internet"/>
+      </siteMapNode>
+      <siteMapNode title="Updates" url="Default.aspx?node=updates">
+        <siteMapNode title="Release 1"/>
+        <siteMapNode title="Game Package"/>
+      </siteMapNode>
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>
