@@ -1,6 +1,8 @@
 ﻿<%@ Master Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="Riservata_MasterPage" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+<asp:Content ID="Content" ContentPlaceHolderID="head" runat="server">
+    <script src="Scripts/calendar.js"></script>
+    <link href="Scripts/calendar.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Main" Runat="Server">
     <div class="tbl1" style="background-color: #E4E7E9">

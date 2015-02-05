@@ -1,9 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="Palestra.aspx.cs" Inherits="Palestra" %>
+﻿<%@ Page Title="La palestra" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="Palestra.aspx.cs" Inherits="Palestra" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Main" Runat="Server">
-			<h2>Shotokenshukai Caravaggio</h2>
+            <h1><%: Title %></h1><hr/>
 			<table style="font-size:17px">
                 <tr>
                     <td style="text-align: center">

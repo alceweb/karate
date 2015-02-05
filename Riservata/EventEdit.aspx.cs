@@ -11,16 +11,4 @@ public partial class Riservata_EventEdit : System.Web.UI.Page
     {
 
     }
-    protected void Calendar1_SelectionChanged(object sender, EventArgs e)
-    {
-        Label data = FormView1.Row.FindControl("LabelData") as Label;
-        Calendar cale = FormView1.Row.FindControl("Calendar1") as Calendar;
-        data.Text = cale.SelectedDate.ToLongDateString();
-        cale.Visible = false;
-    }
-    protected void LinkButton1_Click(object sender, EventArgs e)
-    {
-        Calendar cale = FormView1.Row.FindControl("Calendar1") as Calendar;
-        cale.Visible = true;
-    }
 }

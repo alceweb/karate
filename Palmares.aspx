@@ -1,9 +1,10 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="Palmares.aspx.cs" Inherits="Palmares" %>
+﻿<%@ Page Title="Il nostro palmares" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="Palmares.aspx.cs" Inherits="Palmares" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Main" Runat="Server">
-    <table class="tbl1">
+            <h1><%: Title %></h1><hr/>
+    <table style="margin:auto">
         <tr>
             <th>
                 <asp:Label ID="Label1" runat="server" Text="Cognome"></asp:Label>&nbsp;&nbsp;

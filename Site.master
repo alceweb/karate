@@ -38,9 +38,9 @@
                         <h2 class="icon icon-world"> </h2>
                             <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1">
                                 <ItemTemplate>
-                                    <li style="width:100%" >
-                                        <a href="#">
-                                                <asp:Label ID="Label1" runat="server" Text='<%# Eval("Data", "{0:dd MMM yyyy}") %>' /><br />
+                                    <li >
+                                        <a href="#" style="text-decoration:none">
+                                                <asp:Label ID="Label1" runat="server" Text='<%# Eval("Data", "{0:dd MMM yyyy}") %>' />
                                                 <asp:Label ID="Label2" runat="server" Text='<%# Eval("Titolo") %>' />
                                         </a>
                                         <div class="mp-level">
@@ -64,14 +64,16 @@
                                     Non è stato restituito alcun dato.
                                 </EmptyDataTemplate>
                                 <LayoutTemplate>
-                                    <ul id="itemPlaceholderContainer" runat="server" style="">
+                                    <ul id="itemPlaceholderContainer" runat="server" >
                                         <li runat="server" id="itemPlaceholder" />
                                     </ul>
                                     <div style="">
                                     </div>
                                 </LayoutTemplate>
                             </asp:ListView>
-		                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnString %>" SelectCommand="SELECT * FROM [Eventi] WHERE ([Data] >= { fn NOW() } ) ORDER BY [Data] DESC">
+		                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                                ConnectionString="<%$ ConnectionStrings:ConnString %>" 
+                                SelectCommand="SELECT * FROM [Eventi] WHERE ([Data] >= { fn NOW() } ) ORDER BY [Data] ">
                             </asp:SqlDataSource>
                     </div>
                 </nav>

@@ -15,9 +15,8 @@ h1 {
     line-height: 1em;
 }
 h2 {
-    text-shadow: 0px 0px 5px #000;
     text-align: left;
-    color: #fff;
+    color: #628A81;
 }
 .hr1 {
     border:0;
@@ -151,6 +150,78 @@ footer {
     transform: rotate(5deg) scale(1.1,1.1);
     z-index:999;
     }
+.div1 {
+    display:table;
+    margin: auto;
+    text-align:center;
+}
+    .div1 h3 {
+        color:#628A81;
+    }
+    .div1 div {
+        float:left;
+    border-radius:10px;
+    border: thin solid #E5E5E5;
+    margin: 15px;
+    padding:5px;
+}
+    .div1 img {
+    height:200px;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    -webkit-box-shadow: 0px 0px 25px #000;
+    -moz-box-shadow: 0px 0px 25px #000;
+    box-shadow: 0px 0px 25px #000;
+    border-radius: 0.4em;
+    z-index:1;
+    }
+    .div1 img:hover {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    transform: rotate(5deg) scale(1.1,1.1);
+    z-index: 999;
+    box-shadow: 0px 0px 200px #fff;
+}
+.div2 {
+    display:table;
+    margin:auto;
+}
+.galla {
+    color:yellow;
+
+}
+.galla:hover img{
+-webkit-transform:scale(1.2); /*Webkit: Scale up image to 1.2x original size*/
+-moz-transform:scale(1.2); /*Mozilla scale version*/
+-o-transform:scale(1.2); /*Opera scale version*/
+-moz-box-shadow:1px 1px 30px gray; /*Mozilla shadow version*/
+z-index:0;
+ -ms-transform: scale(1.2); /* IE 9 */
+            opacity: 0.7; 
+            box-shadow: 0px 0px 10px 5px #716556;
+            -webkit-box-shadow: 0px 0px 10px 5px #716556;
+            -moz-box-shadow: 0px 0px 10px 5px #716556;
+ transition:all 1s ease;
+}
+.galla img {
+    height:120px;
+    margin:5px;
+    text-align: center;
+    vertical-align: bottom;
+    border-radius:4px;
+    -webkit-box-shadow: 4px 4px 5px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    4px 4px 5px rgba(50, 50, 50, 0.75);
+    box-shadow:         4px 4px 5px rgba(50, 50, 50, 0.75);
+    float:left;
+ transition:all 1s ease;
+}
+
 /********************
 *   Mobile Styles   *
 ********************/

@@ -1,9 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="Corsi.aspx.cs" Inherits="Corsi" %>
+﻿<%@ Page Title="Orari corsi" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="Corsi.aspx.cs" Inherits="Corsi" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Main" Runat="Server">
-            <h1>Orari dei corsi</h1><hr/>
+            <h1><%: Title %></h1><hr/>
 			<table style="width:100%" >
 				<tr>
 					<td >
