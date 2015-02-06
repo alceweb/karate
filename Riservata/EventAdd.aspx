@@ -11,7 +11,7 @@
 
                     </td>
                     <td>
-                        <asp:TextBox ID="DataTextBox" Text='<%# Bind("Data") %>' runat="server" onclick="Calendar.show(this, '%d/%m/%Y', true)" onblur="Calendar.hide()" ></asp:TextBox>
+                        <asp:TextBox ID="DataTextBox" Text='<%# Bind("Data") %>' runat="server" onclick="Calendar.show(this, '%d/%m/%Y', false)" onblur="Calendar.hide()" ></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -79,5 +79,6 @@
             <asp:Parameter Name="Id" Type="Int32" />
         </UpdateParameters>
     </asp:SqlDataSource>
+    <asp:TextBox CssClass="calendar" ID="TextBox1" onclick="Calendar.show(this, '%d/%m/%Y', false)" runat="server"></asp:TextBox>
     </asp:Content>
 

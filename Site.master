@@ -24,6 +24,7 @@
                 <li><a href='<%: ResolveUrl("Corsi.aspx")%>' >Corsi</a></li>
                 <li><a href='<%: ResolveUrl("Palestra.aspx")%>'>La palestra</a></li>
                 <li><a href='<%: ResolveUrl("Palmares.aspx")%>'>Il palmares</a></li>
+                <li><a href='<%: ResolveUrl("Eventi.aspx")%>'>Vita della palestra</a></li>
 <%--                <li><a href='<%: ResolveUrl("AgonistiMain.html")%>'>Agonisti</a></li>
                 <li><a href="Documenti/Main.aspx">Documenti</a></li>--%>
             </ul>

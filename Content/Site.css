@@ -159,11 +159,12 @@ footer {
         color:#628A81;
     }
     .div1 div {
-        float:left;
-    border-radius:10px;
+    float: left;
+    border-radius: 10px;
     border: thin solid #E5E5E5;
     margin: 15px;
-    padding:5px;
+    padding: 5px;
+    background-color: #F9FBFA;
 }
     .div1 img {
     height:200px;
@@ -192,6 +193,25 @@ footer {
     display:table;
     margin:auto;
 }
+.div3 {
+    float: left;
+    -webkit-box-shadow: 4px 4px 5px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 4px 4px 5px rgba(50, 50, 50, 0.75);
+    box-shadow: 4px 4px 5px rgba(50, 50, 50, 0.75);
+    text-decoration: none;
+    padding: 0px 5px 5px 5px;
+    margin: 0px 0px 15px 10px;
+}
+    .div3 img {
+        float:right;
+        margin: 5px 5px 5px 15px;
+        padding:0;
+    -webkit-box-shadow: 0px 0px 5px #000;
+    -moz-box-shadow: 0px 0px 5px #000;
+    box-shadow: 0px 0px 5px #000;
+    height:100px;
+
+    }
 .galla {
     color:yellow;
 

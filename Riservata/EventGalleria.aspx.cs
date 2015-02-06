@@ -25,16 +25,22 @@ public partial class Riservata_EventGalleria : System.Web.UI.Page
         String path = Server.MapPath(cartella);
         if (Directory.Exists(path))
         {
-            string[] immagini = System.IO.Directory.GetFiles(Server.MapPath(cartella), "*.*");
+            string[] immagini = System.IO.Directory.GetFiles(Server.MapPath(cartella), n + "_*.*");
             lista.DataSource = immagini;
             lista.DataBind();
+            string[] immagini2 = System.IO.Directory.GetFiles(Server.MapPath(cartella), n + "-*.*");
+            lista2.DataSource = immagini2;
+            lista2.DataBind();
         }
         else
         {
             Directory.CreateDirectory(path);
-            string[] immagini = System.IO.Directory.GetFiles(Server.MapPath(cartella), "*.*");
+            string[] immagini = System.IO.Directory.GetFiles(Server.MapPath(cartella), "_*.*");
             lista.DataSource = immagini;
             lista.DataBind();
+            string[] immagini2 = System.IO.Directory.GetFiles(Server.MapPath(cartella), n + "-*.*");
+            lista2.DataSource = immagini2;
+            lista2.DataBind();
         }
     }
     protected void btnDownload_Click(object sender, EventArgs e)
@@ -43,12 +49,16 @@ public partial class Riservata_EventGalleria : System.Web.UI.Page
         string n = ListView1.SelectedValue.ToString();
         //Imposto la cartella di destinazione
         String path = Server.MapPath("~/Immagini/Eventi/" + n + "/");
+        if (!Directory.Exists(path))
+        {
+            Directory.CreateDirectory(path);
+        }
         if (FileUpload1.HasFile)
         {
             foreach (var file in FileUpload1.PostedFiles)
             {
-                file.SaveAs(path + System.IO.Path.GetFileName(file.FileName));
-                Response.Write(file.ContentLength + System.IO.Path.GetFileName(file.FileName));
+                file.SaveAs(path + System.IO.Path.GetFileName(n + "_" + file.FileName));
+                Response.Write(file.ContentLength + System.IO.Path.GetFileName(n + "_" + file.FileName));
             }
             // Avvisa dell'avvenuto upload.
             LblUploadOk.Visible = true;
@@ -60,6 +70,35 @@ public partial class Riservata_EventGalleria : System.Web.UI.Page
             // Avvisa del mancato upload.
             LblUploadOk.Visible = true;
             LblUploadOk.Text = "Non hai scelto l'immagine per la galleria.";
+        }
+    }
+    protected void btnDownload2_Click(object sender, EventArgs e)
+    {
+        //Recupero l'ID per la parte iniziale del nome file
+        string n = ListView1.SelectedValue.ToString();
+        //Imposto la cartella di destinazione
+        String path = Server.MapPath("~/Immagini/Eventi/" + n + "/");
+        if (!Directory.Exists(path))
+        {
+            Directory.CreateDirectory(path);
+        }
+        if (FileUpload2.HasFile)
+        {
+            foreach (var file in FileUpload2.PostedFiles)
+            {
+                file.SaveAs(path + System.IO.Path.GetFileName(n + "-" + file.FileName));
+                Response.Write(file.ContentLength + System.IO.Path.GetFileName( n + "-" + file.FileName));
+            }
+            // Avvisa dell'avvenuto upload.
+            LblUploadOk2.Visible = true;
+            LblUploadOk2.ForeColor = System.Drawing.Color.Red;
+            LblUploadOk2.Text = "Immagini caricate corretamente.<br/>Saranno visibili quando rientrerai nell'ID!<br/><br/>";
+        }
+        else
+        {
+            // Avvisa del mancato upload.
+            LblUploadOk2.Visible = true;
+            LblUploadOk2.Text = "Non hai scelto l'immagine per la galleria.";
         }
     }
 }
