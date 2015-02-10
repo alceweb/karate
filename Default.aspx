@@ -16,13 +16,13 @@
     <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1" DataKeyNames="Id">
         <ItemTemplate>
             <div >
-            <h3><asp:Label ID="TitoloLabel" runat="server" Text='<%# Eval("Titolo") %>' /></h3>
+            <h3 ><asp:Label ID="TitoloLabel" runat="server" Text='<%# Eval("Titolo") %>' /></h3>
             <asp:Label ID="DataLabel" runat="server" Text='<%# Eval("Data", "{0:dd MMM yyyy}") %>' /><br />
-                <a runat="server" href='<%# "Evento.aspx?Id=" + Eval("Id")  %>'><asp:Image ID="Image1" ImageUrl='<%# "~/Immagini/Eventi/" + Eval("Id") + "/" + Eval("Id") + ".jpg" %>' runat="server" /></a><br />
+                <span style="position:relative; margin-top:-200px" ><a runat="server" href='<%# "Evento.aspx?Id=" + Eval("Id")  %>'><asp:Image ID="Image1" ImageUrl='<%# "~/Immagini/Eventi/" + Eval("Id") + "/" + Eval("Id") + ".jpg" %>' runat="server" /></a><br /></span>
             </div>
         </ItemTemplate>
     </asp:ListView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnString %>" SelectCommand='SELECT * FROM [Eventi] WHERE ([Pubblica] = 1) ORDER BY [Data]'/>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnString %>" SelectCommand='SELECT * FROM [Eventi] WHERE ([Pubblica] = 1) ORDER BY [Data] DESC'/>
     </div>
 </asp:Content>
 

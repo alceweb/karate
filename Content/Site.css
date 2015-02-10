@@ -154,6 +154,7 @@ footer {
     display:table;
     margin: auto;
     text-align:center;
+    padding-left:120px;
 }
     .div1 h3 {
         color:#628A81;
@@ -175,11 +176,12 @@ footer {
     transition: all 1s ease;
     -webkit-box-shadow: 0px 0px 25px #000;
     -moz-box-shadow: 0px 0px 25px #000;
-    box-shadow: 0px 0px 25px #000;
+    box-shadow: 0px 0px 8px #000;
     border-radius: 0.4em;
     z-index:1;
     }
     .div1 img:hover {
+        border-radius:0.8em;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
@@ -192,6 +194,7 @@ footer {
 .div2 {
     display:table;
     margin:auto;
+    padding-left:120px;
 }
 .div3 {
     float: left;
@@ -212,6 +215,32 @@ footer {
     height:100px;
 
     }
+.div4 {
+    padding-left:120px;
+}
+    .div4 div {
+    height:100px;
+    }
+    .div4 img {
+        float:left;
+    -webkit-box-shadow: 4px 4px 5px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 4px 4px 5px rgba(50, 50, 50, 0.75);
+    box-shadow: 4px 4px 5px rgba(50, 50, 50, 0.75);
+        margin: 0px 20px 0px 15px;
+        padding:0;
+        height:90px;
+    }
+        .div4 img:hover {
+        border-radius:0.8em;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    transform: rotate(5deg) scale(1.1,1.1);
+    z-index: 999;
+    box-shadow: 0px 0px 200px #fff;
+        }
 .galla {
     color:yellow;
 
@@ -254,7 +283,19 @@ z-index:0;
         header img {
         width:90%;
     }
+    .navi {
+        display:table;
+    }
     nav {
         display:inline-block;
+    }
+    .div1 {
+        padding-left:0px;
+    }
+    .div2 {
+        padding-left: 0px;
+    }
+    .div4 {
+        padding-left: 0px;
     }
 }

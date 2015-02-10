@@ -6,13 +6,14 @@
     <link href="Content/colorbox.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Main" Runat="Server">
+    <h1><%: Title %></h1><hr />
     <div class="div2">
     <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1" DataKeyNames="Id">
         <ItemTemplate>
             <div >
-            <h3><asp:Label ID="TitoloLabel" runat="server" Text='<%# Eval("Titolo") %>' /></h3>
-            <asp:Label ID="DataLabel" runat="server" Text='<%# Eval("Data", "{0:dd MMM yyyy}") %>' /><br />
-                <asp:Label ID="DescrizioneLabel" runat="server" Text='<%# Eval("Descrizione") %>'></asp:Label>
+            <h1><asp:Label ID="TitoloLabel" runat="server" Text='<%# Eval("Titolo") %>' /></h1><hr />
+            <asp:Label ID="DataLabel" Font-Bold="true" runat="server" Text='<%# Eval("Data", "{0:dddd dd MMM yyyy}") %>' /><br />
+                <asp:Label ID="DescrizioneLabel" runat="server" Text='<%# Eval("Descrizione") %>'></asp:Label><br />
             </div>
         </ItemTemplate>
     </asp:ListView>
@@ -21,7 +22,12 @@
             <asp:QueryStringParameter Name="Id" QueryStringField="Id" Type="Int32" />
         </SelectParameters>
     </asp:SqlDataSource>
-    </div><hr />
+    </div>
+    <div class="navi">
+    <a class="FloatLeft" href="Eventi.aspx" runat="server">Tutti gli eventi</a><br />
+
+    </div>                
+<hr />
     <div id="main">
                 <div class="wrap">
                     <section id="exemple" class="clearfix">

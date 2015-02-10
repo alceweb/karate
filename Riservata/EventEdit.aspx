@@ -35,11 +35,14 @@
     </asp:SqlDataSource>
     </div>
     <div class="div3">
-    <asp:ListView ID="ListView2" runat="server" DataKeyNames="Id" DataSourceID="SqlDataSource2" DefaultMode="Edit">
+
+    <asp:ListView ID="ListView2" runat="server" DataKeyNames="Id" DataSourceID="SqlDataSource2" >
         <ItemTemplate>
             <asp:Image ID="Image1" CssClass="div3 img" ImageUrl='<%# "~/Immagini/Eventi/" + Eval("Id") + "/" + Eval("ID") + ".jpg" %>' runat="server" />
              <asp:Label ID="DataLabel" Text='<%# Eval("Data", "{0:dd MMM yyyy}") %>' runat="server" ></asp:Label><br />
-            <asp:Label ID="TitoloLabel" runat="server" Text='<%# Eval("Titolo") %>'></asp:Label><br />
+            <asp:Label ID="TitoloLabel" runat="server" Text='<%# Eval("Titolo") %>'></asp:Label><br /><br />
+            <asp:CheckBox ID="GalleriaCheckBox" Text="Galleria" runat="server" Checked='<%# Eval("Galleria") %>' Enabled="False"></asp:CheckBox><br />
+            <asp:CheckBox ID="PubblicaCheckBox" Text="Pubblica" runat="server" Checked='<%# Eval("Pubblica") %>' Enabled="False"></asp:CheckBox><br /><br />
             <asp:Button ID="Button1" runat="server" CommandName="Edit" Text="Modifica" />
         </ItemTemplate>
         <EditItemTemplate>
@@ -73,20 +76,27 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Pubblica:
-                    </td>
                     <td>
+
+                    </td>
+                    <td>Galleria
+                        <asp:CheckBox ID="GalleriaCheckBox" runat="server" Checked='<%# Bind("Galleria") %>' />
+                        Pubblica
                         <asp:CheckBox ID="PubblicaCheckBox" runat="server" Checked='<%# Bind("Pubblica") %>' />
                     </td>
                 </tr>
                 <tr>
                     <td style="text-align: center">
                         <hr />
-                        <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Update" Text="Aggiorna" />
+                        <asp:LinkButton ID="InsertButton" ForeColor="green" runat="server" CausesValidation="True" CommandName="Update" Text="Aggiorna" />
                     </td>
                     <td style="text-align: center">
                         <hr />
                         <asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Annulla" />
+                    </td>
+                    <td>
+                        <hr />
+                        <asp:LinkButton ID="DeleteButton" ForeColor="red" runat="server" CommandName="Delete" OnClientClick="return confirm('Stai cancelllandoun evento! CONTINUARE?')" Text="Elimina"></asp:LinkButton>
                     </td>
                 </tr>
                 <tr>
@@ -99,8 +109,8 @@
     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnString %>" 
         SelectCommand="SELECT * FROM [Eventi] WHERE ([Id] = @Id)" 
         DeleteCommand="DELETE FROM [Eventi] WHERE [Id] = @Id" 
-        InsertCommand="INSERT INTO [Eventi] ([Data], [Titolo], [Descrizione], [Pubblica], [Approfondimento]) VALUES (@Data, @Titolo, @Descrizione, @Pubblica, @Approfondimento)" 
-        UpdateCommand="UPDATE [Eventi] SET [Data] = @Data, [Titolo] = @Titolo, [Descrizione] = @Descrizione, [Pubblica] = @Pubblica, [Approfondimento] = @Approfondimento WHERE [Id] = @Id">
+        InsertCommand="INSERT INTO [Eventi] ([Data], [Titolo], [Descrizione], [Pubblica], [Approfondimento], [Galleria]) VALUES (@Data, @Titolo, @Descrizione, @Pubblica, @Approfondimento, @Galleria)" 
+        UpdateCommand="UPDATE [Eventi] SET [Data] = @Data, [Titolo] = @Titolo, [Descrizione] = @Descrizione, [Pubblica] = @Pubblica, [Approfondimento] = @Approfondimento, [Galleria] = @Galleria WHERE [Id] = @Id">
         <DeleteParameters>
             <asp:Parameter Name="Id" Type="Int32" />
         </DeleteParameters>
@@ -109,6 +119,7 @@
             <asp:Parameter Name="Titolo" Type="String" />
             <asp:Parameter Name="Descrizione" Type="String" />
             <asp:Parameter Name="Pubblica" Type="Boolean" />
+            <asp:Parameter Name="Galleria" Type="Boolean" />
             <asp:Parameter Name="Approfondimento" Type="String" />
         </InsertParameters>
         <SelectParameters>
@@ -120,6 +131,7 @@
             <asp:Parameter Name="Descrizione" Type="String" />
             <asp:Parameter Name="Pubblica" Type="Boolean" />
             <asp:Parameter Name="Approfondimento" Type="String" />
+            <asp:Parameter Name="Galleria" Type="Boolean" />
             <asp:Parameter Name="Id" Type="Int32" />
         </UpdateParameters>
     </asp:SqlDataSource>
