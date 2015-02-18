@@ -25,6 +25,7 @@
                 <li><a href='<%: ResolveUrl("Palestra.aspx")%>'>La palestra</a></li>
                 <li><a href='<%: ResolveUrl("Palmares.aspx")%>'>Il palmares</a></li>
                 <li><a href='<%: ResolveUrl("Eventi.aspx")%>'>Vita della palestra</a></li>
+                <li><a href='<%: ResolveUrl("Download.aspx")%>'>Download</a></li>
 <%--                <li><a href='<%: ResolveUrl("AgonistiMain.html")%>'>Agonisti</a></li>
                 <li><a href="Documenti/Main.aspx">Documenti</a></li>--%>
             </ul>
@@ -91,7 +92,7 @@
                 <footer>
                 <div>
                        <h6>
-                           <a href="Riservata/EventEdit.aspx"><img style="border-style: none; float: left; width: 23px;" alt="" src="Immagini/modifica.gif" /></a>®2014<a href="http://www.cr-consult.eu/zona-web"> <span >Almish<span style="color:#FF0000" lang="it">&amp;</span>Cesàre<span style="color:#FF0000">W</span>eb</span></a>
+                           <a href='<%: ResolveUrl("~/Riservata/EventEdit.aspx")%>'><img style="border-style: none; float: left; width: 23px;" alt="" src='<%: ResolveUrl("~/Immagini/modifica.gif") %>' /></a>®2014<a href="http://www.cr-consult.eu/zona-web"> <span >Almish<span style="color:#FF0000" lang="it">&amp;</span>Cesàre<span style="color:#FF0000">W</span>eb</span></a>
                            tel. 036353187 cell. 3356255658  mail: cesare@cr-consult.eu 
                        </h6>
                 </div>

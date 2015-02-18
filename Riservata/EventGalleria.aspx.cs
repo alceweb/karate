@@ -53,18 +53,25 @@ public partial class Riservata_EventGalleria : System.Web.UI.Page
         {
             Directory.CreateDirectory(path);
         }
-        if (FileUpload1.HasFile)
-        {
-            foreach (var file in FileUpload1.PostedFiles)
+            //FUNZIONA SOLO CON FRAMEWORK 4.5
+        //if (FileUpload1.HasFiles)
+        //{
+        //    foreach (var file in FileUpload1.PostedFiles)
+        //    {
+        //        file.SaveAs(path + System.IO.Path.GetFileName(n + "_" + file.FileName));
+        //        Response.Write(System.IO.Path.GetFileName(n + "_" + file.FileName));
+        //    }
+        //    // Avvisa dell'avvenuto upload.
+        //    LblUploadOk.Visible = true;
+        //    LblUploadOk.ForeColor = System.Drawing.Color.Red;
+        //    LblUploadOk.Text = "Immagini caricate corretamente.<br/>Saranno visibili quando rientrerai nell'ID!<br/><br/>";
+        //}
+            if (FileUpload1.HasFile)
             {
+                var file = FileUpload1.PostedFile;
                 file.SaveAs(path + System.IO.Path.GetFileName(n + "_" + file.FileName));
-                Response.Write(file.ContentLength + System.IO.Path.GetFileName(n + "_" + file.FileName));
+                Response.Write(System.IO.Path.GetFileName(n + "_" + file.FileName));
             }
-            // Avvisa dell'avvenuto upload.
-            LblUploadOk.Visible = true;
-            LblUploadOk.ForeColor = System.Drawing.Color.Red;
-            LblUploadOk.Text = "Immagini caricate corretamente.<br/>Saranno visibili quando rientrerai nell'ID!<br/><br/>";
-        }
         else
         {
             // Avvisa del mancato upload.
@@ -82,17 +89,24 @@ public partial class Riservata_EventGalleria : System.Web.UI.Page
         {
             Directory.CreateDirectory(path);
         }
+            //FUNZIONA SOLO CON FRAMEWORK 4.5
+        //if (FileUpload2.HasFile)
+        //{
+        //    foreach (var file in FileUpload2.PostedFiles)
+        //    {
+        //        file.SaveAs(path + System.IO.Path.GetFileName(n + "-" + file.FileName));
+        //        Response.Write(System.IO.Path.GetFileName(n + "-" + file.FileName));
+        //    }
+        //    // Avvisa dell'avvenuto upload.
+        //    LblUploadOk2.Visible = true;
+        //    LblUploadOk2.ForeColor = System.Drawing.Color.Red;
+        //    LblUploadOk2.Text = "Immagini caricate corretamente.<br/>Saranno visibili quando rientrerai nell'ID!<br/><br/>";
+        //}
         if (FileUpload2.HasFile)
         {
-            foreach (var file in FileUpload2.PostedFiles)
-            {
-                file.SaveAs(path + System.IO.Path.GetFileName(n + "-" + file.FileName));
-                Response.Write(file.ContentLength + System.IO.Path.GetFileName( n + "-" + file.FileName));
-            }
-            // Avvisa dell'avvenuto upload.
-            LblUploadOk2.Visible = true;
-            LblUploadOk2.ForeColor = System.Drawing.Color.Red;
-            LblUploadOk2.Text = "Immagini caricate corretamente.<br/>Saranno visibili quando rientrerai nell'ID!<br/><br/>";
+            var file = FileUpload2.PostedFile;
+            file.SaveAs(path + System.IO.Path.GetFileName(n + "-" + file.FileName));
+            Response.Write(System.IO.Path.GetFileName(n + "-" + file.FileName));
         }
         else
         {

@@ -10,7 +10,8 @@
         <ItemTemplate>
         <div>
             <a href='<%# "~/Evento.aspx?id=" + Eval("Id") %>' runat="server"><asp:Image ID="Image1" ImageUrl='<%# "~/Immagini/Eventi/" + Eval("Id") + "/" + Eval("Id") + ".jpg" %>' runat="server" /></a>
-            <asp:Label ID="DataLabel" Font-Bold="true" runat="server" Text='<%# Eval("Data", "{0:dd MMM yyyy}" )%>'></asp:Label><br />
+            <span style="padding-left:30px; font-weight:bold"><asp:Label ID="DataLabel" runat="server" Text='<%# Eval("Data", "{0:dd MMM yyyy}" )%>'></asp:Label>
+            </span><br />
             <h2><asp:Label ID="TitoloLabel" runat="server" Text='<%# Eval("Titolo") %>'></asp:Label></h2>
         </div><hr />
         </ItemTemplate>

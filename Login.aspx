@@ -6,8 +6,13 @@ Sub Login(Sender As Object, e As EventArgs)
     Dim password As String = txtPassword.Text
     If FormsAuthentication.Authenticate(username ,password)
         FormsAuthentication.RedirectFromLoginPage(username, false)
-            Response.Redirect("Riservata/EventEdit.aspx")
-    End If
+            If (username = "agonista") Then
+                Response.Redirect("Agonisti/Main.aspx")
+            Else
+                Response.Redirect("Riservata/EventEdit.aspx")
+                
+            End If
+        End If
 End Sub
 </script>
 <html>
