@@ -17,8 +17,8 @@
         <ItemTemplate>
             <div >
             <h3 ><asp:Label ID="TitoloLabel" runat="server" Text='<%# Eval("Titolo") %>' /></h3>
-            <asp:Label ID="DataLabel" runat="server" Text='<%# Eval("Data", "{0:dd MMM yyyy}") %>' /><br />
-                <span style="position:relative; margin-top:-200px" ><a runat="server" href='<%# "Evento.aspx?Id=" + Eval("Id")  %>'><asp:Image ID="Image1" ImageUrl='<%# "~/Immagini/Eventi/" + Eval("Id") + "/" + Eval("Id") + ".jpg" %>' runat="server" /></a><br /></span>
+            <asp:Label ID="DataLabel" runat="server" Text='<%# Eval("Data", "{0:dd MMM yyyy}") %>' /><br /><br />
+                <span ><a runat="server" href='<%# "Evento.aspx?Id=" + Eval("Id")  %>'><asp:Image ID="Image1" ImageUrl='<%# "~/Immagini/Eventi/" + Eval("Id") + "/" + Eval("Id") + ".jpg" %>' runat="server" /></a><br /></span>
             </div>
         </ItemTemplate>
     </asp:ListView>

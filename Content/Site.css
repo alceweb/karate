@@ -7,6 +7,7 @@ body {
     padding: 0;
     border-top: solid 10px #000;
     font-family: "Segoe UI" , Verdana, Helvetica, Sans-Serif;
+    background-color: #ebebeb;
 }
 h1 {
     text-shadow: 0px 0px 5px #000;
@@ -93,6 +94,34 @@ header {
     .tbl1 td {
     vertical-align:top;
     }
+.tbl2{
+margin-left: 120px;
+margin-bottom:10px;
+    -webkit-box-shadow: 4px 4px 5px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 4px 4px 5px rgba(50, 50, 50, 0.75);
+    box-shadow: 4px 4px 5px rgba(50, 50, 50, 0.75);
+}
+.tbl2 th td{
+	border:1px solid #CCC;border-collapse:collapse
+}
+.tbl2 td th{
+	padding:5px;text-align:left
+}
+.tbl2 th{
+	background: #3C606A;
+	color: #FFF;
+}
+.tbl2 tr.odd td{
+	background: #ddd
+}
+.tbl2 col.odd{
+	background: #eee
+}
+.tbl2 tr:hover td{
+	background: #B1B6DE
+}
+
+
 
 .appuntamenti {
     border: thin solid #A0A0C4;
@@ -158,6 +187,8 @@ footer {
 }
     .div1 h3 {
         color:#628A81;
+        margin-top:0px;
+        margin-bottom:0px;
     }
     .div1 div {
     float: left;
@@ -215,6 +246,11 @@ footer {
     height:100px;
 
     }
+    .div3edit {
+    }
+        .div3edit img {
+            height:20px;
+        }
 .div4 {
     padding-left:120px;
 }
@@ -269,6 +305,16 @@ z-index:0;
     box-shadow:         4px 4px 5px rgba(50, 50, 50, 0.75);
     float:left;
  transition:all 1s ease;
+}
+.video1 {
+    width:400px;
+    height:300px;
+    margin:10px;
+    border-radius:5px;
+    -webkit-box-shadow: 0px 0px 10px #000;
+    -moz-box-shadow:    0px 0px 10px #000;
+    box-shadow:         0px 0px 10px #000;
+
 }
 
 /********************
