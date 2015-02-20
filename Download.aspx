@@ -14,7 +14,29 @@
 </tr>
 </thead>
 	<tbody>
-		<tr>
+		<tr class="odd">
+            <td rowspan="2">
+                Iscrizione Goshindo
+            </td>
+            <td>
+                Modulo per iscrizione a Goshindo per l'anno 2015 <strong><em>"socio ordinario"</em><br /></strong>
+            </td>
+            <td>
+                <a href="Download/Iscrizione__Socio_Ordinario_HS_Goshindo_2015.pdf"><img alt="" src="Immagini/icona_pdf.jpg" /></a><br />
+            </td>
+        </tr>
+        <tr  class="odd">
+            <td>
+                Modulo per iscrizione a Goshindo per l'anno 2015 <strong><em>"socio sostenitore"</em></strong>
+
+            </td>
+            <td>
+                <a href="Download/Iscrizione__Socio_Sostenitore_HS_Goshindo_2015.pdf"><img alt="" src="Immagini/icona_pdf.jpg" /></a>
+
+            </td>
+
+        </tr>
+        <tr>
 			<td >Esami kyu</td>
 			<td>Tutti i programmi di tutti gli esami di passaggio di kyu del 
 			gruppo shotokenshukai</td>
@@ -59,7 +81,9 @@
 		<tr class="odd">
 		   <td >Scheda anamnesi</td>
 		   <td>Scheda anamnesi da presentare allo <em>"Sportmans Center"</em> per&nbsp; 
-		   avere la visita gratuita per gli atleti da 11 a 18 anni.</td>
+		   avere la visita gratuita per gli atleti da 11 a 18 anni.<br />
+               La scheda deve essere stampata <strong>fronte/retro su un solo  foglio</strong> firmata da uno dei genitori e consegnata al momento della visita unitamente al tesserino sanitario e alla carta d'identità
+		   </td>
 		   <td ><a href="Download/SchedaAnamnesi.pdf">
 		   <img alt="" src="Immagini/icona_pdf.jpg" /></a></td>
 		</tr>
