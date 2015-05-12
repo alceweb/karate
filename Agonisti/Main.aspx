@@ -4,14 +4,17 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Main" Runat="Server">
     <h1><%: Title %></h1><hr />
-    <div>
-    <h2>Allenamento di sabato 14 febbraio 2015</h2>
-        <iframe class="video1" src="https://www.youtube.com/embed/t1WjrPJJP1A" frameborder="0" allowfullscreen></iframe>
-        <iframe class="video1" src="https://www.youtube.com/embed/dVSBs-d-OCw" frameborder="0" allowfullscreen></iframe>
-        <iframe class="video1" src="https://www.youtube.com/embed/K9l42FIG2Tc" frameborder="0" allowfullscreen></iframe>
-        <iframe class="video1" src="https://www.youtube.com/embed/SWqbaDQdk1g" frameborder="0" allowfullscreen></iframe>
-        <iframe class="video1" src="https://www.youtube.com/embed/lQDGPKUwFEQ" frameborder="0" allowfullscreen></iframe>
-        <iframe class="video1" src="https://www.youtube.com/embed/6Bd9rEmpHss" frameborder="0" allowfullscreen></iframe>
+    <div class="naviAgo" >
+        <ul>
+            <li >
+    <a href="Filmati.aspx" runat="server">Allenamento di sabato 14 febbraio 2015</a>
+
+            </li>
+            <li>
+        <a href="Regionali.aspx" runat="server">Iscrizioni regionali 2015</a>
+
+            </li>
+        </ul>
     </div>
 </asp:Content>
 

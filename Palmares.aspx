@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="Il nostro palmares" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="Palmares.aspx.cs" Inherits="Palmares" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <link href="Content/font-awesome.css" rel="stylesheet" />
+    <link href="Content/icons.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Main" Runat="Server">
             <h1><%: Title %></h1><hr/>
@@ -12,9 +14,12 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Label ID="Label2" runat="server" Text="Nome"></asp:Label>&nbsp;&nbsp;
                 <asp:DropDownList ID="DropDownList2" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource2" DataTextField="Nome" DataValueField="Nome"></asp:DropDownList>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnString %>" SelectCommand="SELECT DISTINCT [Cognome] FROM [Palmares] ORDER BY [Cognome]"></asp:SqlDataSource>
-                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnString %>" SelectCommand="SELECT DISTINCT [Nome] FROM [Palmares] WHERE ([Cognome] = @Cognome) ORDER BY [Nome]">
-                    <SelectParameters>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnString %>" 
+                    SelectCommand="SELECT DISTINCT [Cognome] FROM [Anag$] ORDER BY [Cognome]">
+                </asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnString %>" 
+                    SelectCommand="SELECT DISTINCT [Nome] FROM [Anag$] WHERE ([Cognome] = @Cognome) ORDER BY [Nome]">
+                <SelectParameters>
                         <asp:ControlParameter ControlID="DropDownList1" Name="Cognome" PropertyName="SelectedValue" Type="String" />
                     </SelectParameters>
                 </asp:SqlDataSource>
@@ -75,29 +80,19 @@
                                     <table class="tbl1"  id="itemPlaceholderContainer" runat="server" border="0" style="">
                                         <tr runat="server" style="">
                                             <th runat="server">
-                                                <asp:LinkButton CssClass="FloatLeft" ForeColor="White" OnClick="LinkButton1_Click" ID="LinkButton1" runat="server">▲ </asp:LinkButton>
-                                                <asp:LinkButton CssClass="FloatLeft" ForeColor="White" ID="LinkButton2" OnClick="LinkButton2_Click" runat="server"> ▼ </asp:LinkButton>
-                                                DataGara
+                                                  Data  
                                             </th>
                                             <th runat="server">
-                                                <asp:LinkButton CssClass="FloatLeft" ForeColor="White" OnClick="LinkButton3_Click" ID="LinkButton3" runat="server">▲ </asp:LinkButton>
-                                                <asp:LinkButton CssClass="FloatLeft" ForeColor="White" OnClick="LinkButton4_Click" ID="LinkButton4" runat="server"> ▼ </asp:LinkButton>
-                                                LuogoGara
+                                                 Luogo 
                                             </th>
                                             <th runat="server">
-                                                <asp:LinkButton CssClass="FloatLeft" ForeColor="White" OnClick="LinkButton5_Click" ID="LinkButton5" runat="server">▲ </asp:LinkButton>
-                                                <asp:LinkButton CssClass="FloatLeft" ForeColor="White" OnClick="LinkButton6_Click" ID="LinkButton6" runat="server"> ▼ </asp:LinkButton>
-                                                Gara
+                                                 Gara 
                                             </th>
                                             <th runat="server">
-                                                <asp:LinkButton CssClass="FloatLeft" ForeColor="White" OnClick="LinkButton7_Click" ID="LinkButton7" runat="server">▲ </asp:LinkButton>
-                                                <asp:LinkButton CssClass="FloatLeft" ForeColor="White" OnClick="LinkButton8_Click" ID="LinkButton8" runat="server"> ▼ </asp:LinkButton>
-                                                Classifica
+                                                 Classifica 
                                             </th>
                                             <th runat="server">
-                                                <asp:LinkButton CssClass="FloatLeft" ForeColor="White" OnClick="LinkButton9_Click" ID="LinkButton9" runat="server">▲ </asp:LinkButton>
-                                                <asp:LinkButton CssClass="FloatLeft" ForeColor="White" OnClick="LinkButton10_Click" ID="LinkButton10" runat="server"> ▼ </asp:LinkButton>
-                                                Specialità
+                                                 Specialità 
                                             </th>
                                         </tr>
                                         <tr id="itemPlaceholder" runat="server">
@@ -113,7 +108,7 @@
                 </asp:ListView>
                 <asp:SqlDataSource ID="SqlDataSource3" runat="server"
                     ConnectionString="<%$ ConnectionStrings:ConnString %>"
-                    SelectCommand="SELECT DISTINCT [Cognome], [Nome], [DataGara], [LuogoGara], [Gara], [Classifica], [Specialità] FROM [Palmares] WHERE (([Cognome] = @Cognome) AND ([Nome] = @Nome)) ORDER BY [DataGara]">
+                    SelectCommand="SELECT [Anag$].[Cognome], [Anag$].[Nome], [DataGara], [LuogoGara], [Gara], [Classifica], [Specialità] FROM [Palmares] inner join [Anag$] on [IdAllievo] = [Anag$].[Id] WHERE (([Anag$].[Cognome] = @Cognome) AND ([Anag$].[Nome] = @Nome)) ORDER BY [DataGara] desc">
                     <SelectParameters>
                         <asp:ControlParameter ControlID="DropDownList1" Name="Cognome" PropertyName="SelectedValue" Type="String" />
                         <asp:ControlParameter ControlID="DropDownList2" Name="Nome" PropertyName="SelectedValue" Type="String" />

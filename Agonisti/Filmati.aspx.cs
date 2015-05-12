@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class Palmares : System.Web.UI.Page
+public partial class Agonisti_Filmati : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {

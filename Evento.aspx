@@ -52,19 +52,6 @@
                             </ItemTemplate>
                             <FooterTemplate></FooterTemplate>
                         </asp:Repeater>
-                        <asp:Repeater ID="lista1" runat="server">
-                            <HeaderTemplate>
-                            </HeaderTemplate>
-                            <ItemTemplate>
-                                <span class="galla">
-                                <a class="group1" href="<%# (Container.DataItem as string).Substring(Server.MapPath("./").Length).Replace("\\", "/") %>">
-                                </a>
-
-                                </span>
-
-                            </ItemTemplate>
-                            <FooterTemplate></FooterTemplate>
-                        </asp:Repeater>
                     </section>
                 </div>
             </div>
