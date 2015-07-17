@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Calendar Javascript</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<script type="text/javascript" src="Scripts/calendar.js"></script>
+    <link href="Scripts/calendar.css" rel="stylesheet" />
+</head>
+<body>
+<br /><br />
+
+
+<form name="test_calendar" action="" method="get">
+	Esempio 1 (onFocus e onBlur): <br />
+	<input type="text" name="mydate" value="" onclick="Calendar.show(this, '%d/%m/%Y', true)" onfocus="Calendar.show(this, '%d/%m/%Y', true)" onblur="Calendar.hide()" />
+
+	<br /><br /><br />
+	Esempio 2 (onClick sull'icona): <br />
+	<input type="text" name="expdate" id="expdate" value=""/>
+	<img src="Scripts/images/select.gif" alt="seleziona la data" onclick="Calendar.show(document.getElementById('expdate'), '%d/%m/%Y', false, ['<2010-08-1', '>2010-08-31'])" style="cursor:pointer;" />
+</form>
+</body>
+</html>
+

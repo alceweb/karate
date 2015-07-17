@@ -9,40 +9,8 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Main" Runat="Server">
-    <asp:ListView ID="lista" runat="server" >
-                            <ItemTemplate>
-                                <span class="galla">
-                                <a class="group1" href="<%# (Container.DataItem as string).Substring(Server.MapPath("./").Length).Replace("\\", "/") %>">
-                                    <img style="border: thin solid #9C9C9C; margin: 8px;" src="<%# (Container.DataItem as string).Substring(Server.MapPath("./").Length).Replace("\\", "/") %>" />
-                                </a>
+<a runat="server" href="http://f1d3i.s87.it/documenti/customforms/3/subemail_it.html">Iscriviti</a>
+    <asp:Button ID="Button1" OnClientClick="window.open(http://f1d3i.s87.it/documenti/customforms/3/subemail_it.html)" style="background:#fff;font-weight:bold;font-size:18px;text-align:center;vertical-align:middle;cursor:pointer;display:inline-block;padding:10px 16px; line-height: 22px; font-family: sans-serif; box-shadow: none; border-radius:6px;border:1px solid #ccc;box-shadow:none" runat="server" Text="Button" />
 
-                                </span>
-
-                            </ItemTemplate>
-        <LayoutTemplate>
-            <table runat="server">
-                <tr runat="server">
-                    <td runat="server">
-                        <table id="itemPlaceholderContainer" runat="server" border="0" style="">
-                            <tr runat="server" style="">
-                            </tr>
-                            <tr id="itemPlaceholder" runat="server">
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-                <tr runat="server">
-                    <td runat="server" style="">
-                        <asp:DataPager ID="DataPager1" runat="server" PageSize="10">
-                            <Fields>
-                                <asp:NextPreviousPagerField ButtonType="Button" ShowFirstPageButton="False" ShowLastPageButton="False" ShowNextPageButton="False" ShowPreviousPageButton="False" Visible="False" />
-                            </Fields>
-                        </asp:DataPager>
-                    </td>
-                </tr>
-            </table>
-        </LayoutTemplate>
-    </asp:ListView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnString %>" SelectCommand="SELECT * FROM [Eventi]"></asp:SqlDataSource>
 </asp:Content>
 

@@ -84,6 +84,9 @@
                     <div style="padding-left:0px" class="block block-40 clearfix">
                         <a style="background-color: #9C9D98; border-radius: 0px 10px 10px 0px; padding-left: 5px; margin-left: 0px; padding-right: 10px;" href="#" id="trigger" ><span class="icon icon-calendar">Appuntamenti</span></a>
                     </div>
+                    <asp:ContentPlaceHolder ID="Spash" runat="server">
+
+                    </asp:ContentPlaceHolder>
                     <asp:ContentPlaceHolder ID="Main" runat="server">
                     </asp:ContentPlaceHolder>
                 </div>

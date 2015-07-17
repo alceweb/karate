@@ -1,0 +1,19 @@
+﻿body {
+}
+.miodiv {
+    border:solid;
+    float:left;
+}
+.redClass {
+    background-color:red;
+}
+#navigation {
+    text-decoration: none;
+    list-style-type: none;
+}
+    #navigation li {
+        float:left;
+        margin:10px;
+    }
+        #navigation li a {
+        }

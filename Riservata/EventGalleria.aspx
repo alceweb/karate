@@ -1,8 +1,7 @@
 ﻿<%@ Page Title="Galleria fotografica" Language="C#" MasterPageFile="~/Riservata/MasterPage.master" AutoEventWireup="true" CodeFile="EventGalleria.aspx.cs" Inherits="Riservata_EventGalleria" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="Admin" Runat="Server">
     <h2><%: Title %></h2>
-    <div class="FloatLeft tbl1">
+    <div class="div3" >
     <asp:ListView ID="ListView1" OnSelectedIndexChanged="ListView1_SelectedIndexChanged" EnablePersistedSelection="true" SelectedIndex="0" runat="server" DataKeyNames="Id" DataSourceID="SqlDataSource1" >
         <ItemSeparatorTemplate></ItemSeparatorTemplate>
         <AlternatingItemTemplate>
@@ -32,38 +31,24 @@
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnString %>" 
         SelectCommand="SELECT * FROM [Eventi] ORDER BY [Data] DESC">
     </asp:SqlDataSource>
-    </div>
-    <div class="FloatLeft tbl1">
-        <h3>Immagini repeater: <asp:FileUpload ID="FileUpload1" AllowMultiple="True" runat="server" />
-        <asp:Button ID="btnDownload" OnClick="btnDownload_Click" runat="server" Text="Download" /></h3>
+        </div>
+    <div class="div5">
+
+        <h3>Immagini repeater: <asp:FileUpload ID="FileUpload1" multiple="multiple" runat="server" />
+        <asp:Button ID="btnDownload" ForeColor="red" OnClick="btnDownload_Click" runat="server" Text="Download" /></h3>
         <asp:Label ID="Label2" runat="server" Text="Formato nome: Id_nomefile"></asp:Label>
-        <asp:Label ID="LblUploadOk" CssClass="icon icon-key" Visible="false" runat="server"></asp:Label><hr />
+        <asp:Label ID="LblUploadOk" CssClass="icon icon-key" Visible="false" runat="server"></asp:Label>
         <asp:Repeater ID="lista" runat="server" EnableTheming="False">
             <HeaderTemplate>
                 <div>
                 </div>
             </HeaderTemplate>
             <ItemTemplate>
-                <img style="margin: 5px; height: 60px; float: left" src='../<%# (Container.DataItem as string).Substring(Server.MapPath("~/").Length).Replace("\\", "/") %>' />
+                <img src='../<%# (Container.DataItem as string).Substring(Server.MapPath("~/").Length).Replace("\\", "/") %>' />
             </ItemTemplate>
             <FooterTemplate></ul></FooterTemplate>
         </asp:Repeater>
-    </div>
-    <div class="FloatLeft tbl1">
-        <h3>Immagini galleria: <asp:FileUpload ID="FileUpload2" AllowMultiple="True" runat="server" />
-        <asp:Button ID="btnDownload2" OnClick="btnDownload2_Click" runat="server" Text="Download" /></h3>
-        <asp:Label ID="Label1" runat="server" Text="Formato nome: Id-nomefile"></asp:Label>
-        <asp:Label ID="LblUploadOk2" CssClass="icon icon-key" Visible="false" runat="server"></asp:Label><hr />
-        <asp:Repeater ID="lista2" runat="server" EnableTheming="False">
-            <HeaderTemplate>
-                <div>
-                </div>
-            </HeaderTemplate>
-            <ItemTemplate>
-                <img style="margin: 5px; height: 60px; float: left" src='../<%# (Container.DataItem as string).Substring(Server.MapPath("~/").Length).Replace("\\", "/") %>' />
-            </ItemTemplate>
-            <FooterTemplate></ul></FooterTemplate>
-        </asp:Repeater>
-    </div>
+        </div>
+
 </asp:Content>
 
