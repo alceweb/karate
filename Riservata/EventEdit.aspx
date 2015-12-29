@@ -42,7 +42,7 @@
              <asp:Label ID="DataLabel" Text='<%# Eval("Data", "{0:dd MMM yyyy}") %>' runat="server" ></asp:Label><br />
             <asp:Label ID="TitoloLabel" runat="server" Text='<%# Eval("Titolo") %>'></asp:Label><br /><br />
             <asp:CheckBox ID="GalleriaCheckBox" Text="Galleria" runat="server" Checked='<%# Eval("Galleria") %>' Enabled="False"></asp:CheckBox><br />
-            <asp:CheckBox ID="PubblicaCheckBox" Text="Pubblica" runat="server" Checked='<%# Eval("Pubblica") %>' Enabled="False"></asp:CheckBox><br /><br />
+            <asp:CheckBox ID="PubblicaCheckBox" Text="Prima pagina" runat="server" Checked='<%# Eval("Pubblica") %>' Enabled="False"></asp:CheckBox><br /><br />
             <asp:Button ID="Button1" runat="server" CommandName="Edit" Text="Modifica" />
         </ItemTemplate>
         <EditItemTemplate>
@@ -81,7 +81,7 @@
                     </td>
                     <td>Galleria
                         <asp:CheckBox ID="GalleriaCheckBox" runat="server" Checked='<%# Bind("Galleria") %>' />
-                        Pubblica
+                        Prima pagina
                         <asp:CheckBox ID="PubblicaCheckBox" runat="server" Checked='<%# Bind("Pubblica") %>' />
                     </td>
                 </tr>

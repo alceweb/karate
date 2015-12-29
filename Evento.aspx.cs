@@ -14,7 +14,7 @@ public partial class Evento : System.Web.UI.Page
         System.Threading.Thread.CurrentThread.CurrentUICulture
              = new System.Globalization.CultureInfo("it-IT");
         string cartella = "~/Immagini/Eventi/" + Request.QueryString["Id"] + "/";
-        string[] immagini = System.IO.Directory.GetFiles(Server.MapPath(cartella), "*.jpg");
+        string[] immagini = System.IO.Directory.GetFiles(Server.MapPath(cartella), "*.*");
         lista.DataSource = immagini;
         lista.DataBind();
     }

@@ -13,11 +13,12 @@
                 </EmptyDataTemplate>
                 <ItemTemplate>
                     <div class="Splash">
-                        <asp:Label ID="TestoLabel" runat="server" Text='<%# Eval("Testo") %>' />
-                        <br />
-                        <br />
-                        </span>
-                        <div>
+                        <img src="Immagini/ScrittaTrasparenteG.png" />
+                    <asp:Label ID="TestoLabel" runat="server" Text='<%# Eval("Testo") %>' />
+                    <br />
+                    <br /></span>
+                        <div >
+
                         </div>
                     </div>
                 </ItemTemplate>
@@ -25,7 +26,7 @@
                     <div id="itemPlaceholderContainer" class="ContenteSplash" runat="server" style="">
                         <div runat="server" id="itemPlaceholder"/>
                     <div class="SplashFooter">
-                        <asp:LinkButton ID="Button1" OnClick="Button1_Click" runat="server" Text="Entra" CssClass="SplashButton" BorderStyle="Solid" BorderWidth="1"></asp:LinkButton><br /><br />
+                        <asp:LinkButton ID="Button1" OnClick="Button1_Click" runat="server" Text="Entra" CssClass="SplashButton" BorderStyle="None" BorderWidth="0"></asp:LinkButton><br /><br />
                     </div>
                     </div>
                 </LayoutTemplate>

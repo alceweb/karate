@@ -11,12 +11,16 @@
 					<span >Rocchetti Cesare Maestro 5 dan - Renshi Goshindo<br /></span>
 					<br/>Lunedì
 					<ul>
-							<li>dalle 18:00 alle 19:00 bambini</li>
+							<li>dalle 18:00 alle 19:00 bambini tutte le cinture</li>
 							<li>dalle 19:00 alle 20:00 adulti</li>
 						</ul>
+                        mercoledì
+                        <ul>
+                            <li>dalle 19:00 alle 20:00 bambini fino a cintura arancio (presso la palestra Punto Fitness)</li>
+                        </ul>
 					venerdì
 					<ul>
-						<li>dalle 19:00 alle 20:00 bambini</li>
+						<li>dalle 19:00 alle 20:00 bambini da cintura verde</li>
 						<li>dalle 20:00 alle 21:00 adulti</li>
 					</ul><hr/>
 					<h2 >Castel Rozzone<span class="auto-style1"> (via T. Tasso 
@@ -29,7 +33,7 @@
 					<ul>
 						<li>dalle 18:00 alle 19:00</li>
 					</ul><hr />
-					<h2 style="color:#22226C">Agonisti</h2>
+					<h2 >Agonisti</h2>
 					<p>Castel Rozzone Sabato dalle 15:00 alle 17:30</p>
 					</td>
 				<td style="text-align:center">

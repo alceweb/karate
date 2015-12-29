@@ -15,10 +15,10 @@
                 <asp:Label ID="Label2" runat="server" Text="Nome"></asp:Label>&nbsp;&nbsp;
                 <asp:DropDownList ID="DropDownList2" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource2" DataTextField="Nome" DataValueField="Nome"></asp:DropDownList>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnString %>" 
-                    SelectCommand="SELECT DISTINCT [Cognome] FROM [Anag$] ORDER BY [Cognome]">
+                    SelectCommand="SELECT DISTINCT [Cognome] FROM [Palmares] ORDER BY [Cognome]">
                 </asp:SqlDataSource>
                 <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnString %>" 
-                    SelectCommand="SELECT DISTINCT [Nome] FROM [Anag$] WHERE ([Cognome] = @Cognome) ORDER BY [Nome]">
+                    SelectCommand="SELECT DISTINCT [Nome] FROM [Palmares] WHERE ([Cognome] = @Cognome) ORDER BY [Nome]">
                 <SelectParameters>
                         <asp:ControlParameter ControlID="DropDownList1" Name="Cognome" PropertyName="SelectedValue" Type="String" />
                     </SelectParameters>
@@ -108,7 +108,7 @@
                 </asp:ListView>
                 <asp:SqlDataSource ID="SqlDataSource3" runat="server"
                     ConnectionString="<%$ ConnectionStrings:ConnString %>"
-                    SelectCommand="SELECT [Anag$].[Cognome], [Anag$].[Nome], [DataGara], [LuogoGara], [Gara], [Classifica], [Specialità] FROM [Palmares] inner join [Anag$] on [IdAllievo] = [Anag$].[Id] WHERE (([Anag$].[Cognome] = @Cognome) AND ([Anag$].[Nome] = @Nome)) ORDER BY [DataGara] desc">
+                    SelectCommand="SELECT [Anag$].[Cognome], [Anag$].[Nome], [DataGara], [LuogoGara], [Gara], [Classifica], [Specialità] FROM [Palmares] inner join [Anag$] on [IdAllievo] = [Anag$].[Id] WHERE (([Anag$].[Cognome] = @Cognome) AND ([Anag$].[Nome] = @Nome)) ORDER BY [DataGara] DESC">
                     <SelectParameters>
                         <asp:ControlParameter ControlID="DropDownList1" Name="Cognome" PropertyName="SelectedValue" Type="String" />
                         <asp:ControlParameter ControlID="DropDownList2" Name="Nome" PropertyName="SelectedValue" Type="String" />

@@ -45,12 +45,12 @@
         $('h2:first').html('Questo <strong>la ho scritta</strong> io');
     });
     $('#btnNascondiTabella').click(function () {
-        $('#celebs').fadeOut(5000);
+        $('#celebs').fadeOut(1000);
         $(this).fadeOut();
         $('#btnMostraTabella').fadeIn();
     });
     $('#btnMostraTabella').click(function () {
-        $('#celebs').fadeIn(5000);
+        $('#celebs').fadeIn(1000);
         $(this).fadeOut();
         $('#btnNascondiTabella').fadeIn();
     });
@@ -58,12 +58,5 @@
         $(this).toggleClass('redClass');
     });
     $('#navigation li').hover(function () {
-        $(this).animate({
-            paddingleft: '+=15px'
-        }, 200);
-    }, function () {
-        $(this).animate({
-            paddingleft: '-=15px'
-        }, 200);
     });
 });

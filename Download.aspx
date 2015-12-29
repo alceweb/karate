@@ -14,6 +14,17 @@
 </tr>
 </thead>
 	<tbody>
+        <tr>
+            <td>
+                Meeting Europeo
+            </td>
+            <td>
+                Modulo richiesta tessera Meeting Europeo
+            </td>
+            <td>
+                <a href="Download/RichTesseraMeetingEu.pdf"><img alt="" src="Immagini/icona_pdf.jpg" /></a><br />
+            </td>
+        </tr>
 		<tr class="odd">
             <td rowspan="2">
                 Iscrizione Goshindo
